@@ -1,0 +1,6 @@
+# python generated file
+*.pyc
+__pycache__
+
+# sqlite local database
+*.sqlite3

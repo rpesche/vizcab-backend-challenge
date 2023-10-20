@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "vizcab"
+version = "0.1.0"
+description = "Vizcab technical test"
+authors = ["Romain Pesche <romain@pesche.fr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+djangorestframework = "^3.14.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
