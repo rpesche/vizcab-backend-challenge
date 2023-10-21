@@ -11,7 +11,12 @@ djangorestframework = "^3.14.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.2"
+pytest-django = "^4.5.2"
+factory-boy = "^3.3.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "vizcab.settings"
