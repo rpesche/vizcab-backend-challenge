@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 from django.db import models
 
 
@@ -26,6 +28,14 @@ class Building(models.Model):
         help_text="The period in years of the lifecycle analysis"
     )
 
+    def impact(self) -> Decimal:
+        total_impact = Decimal("0")
+        for zone in self.zones.all():
+            zone_impact = sum(zone.impacts())
+            total_impact += zone_impact
+
+        return total_impact
+
     def __str__(self):
         return self.name
 
@@ -44,6 +54,22 @@ class ConstructionProduct(models.Model):
     def __str__(self):
         return self.name
 
+    def impact_production(self, quantity: Decimal) -> Decimal:
+        return self.production_impact * quantity
+
+    def impact_construction(self, quantity: Decimal) -> Decimal:
+        return self.construction_impact * quantity
+
+    def impact_endoflife(self, quantity: Decimal) -> Decimal:
+        return self.endoflife_impact * quantity
+
+    def impacts(self, quantity: Decimal) -> tuple[Decimal, Decimal, Decimal]:
+        return (
+            self.impact_production(quantity),
+            self.impact_construction(quantity),
+            self.impact_endoflife(quantity),
+        )
+
 
 class Zone(models.Model):
     name = models.CharField(max_length=100, help_text="The name of this zone")
@@ -56,6 +82,22 @@ class Zone(models.Model):
     )
 
     products = models.ManyToManyField(ConstructionProduct, through="ZoneProduct")
+
+    def impacts(self) -> tuple[Decimal, Decimal, Decimal]:
+        zone_products = ZoneProduct.objects.all().filter(zone=self)
+        products_impacts = [
+            zone_product.product.impacts(zone_product.quantity)
+            for zone_product in zone_products
+        ]
+        production_impacts, construction_impacts, endoflife_impacts = list(
+            zip(*products_impacts)
+        )
+
+        return (
+            sum(production_impacts),
+            sum(construction_impacts),
+            sum(endoflife_impacts),
+        )
 
     def __str__(self):
         return self.name
