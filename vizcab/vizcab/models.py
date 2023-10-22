@@ -55,5 +55,13 @@ class Zone(models.Model):
         choices=Usage.choices, help_text="The usage of this zone"
     )
 
+    products = models.ManyToManyField(ConstructionProduct, through="ZoneProduct")
+
     def __str__(self):
         return self.name
+
+
+class ZoneProduct(models.Model):
+    zone = models.ForeignKey(to=Zone, on_delete=models.CASCADE)
+    product = models.ForeignKey(to=ConstructionProduct, on_delete=models.CASCADE)
+    quantity = models.DecimalField(max_digits=9, decimal_places=2)
