@@ -63,11 +63,33 @@ class ConstructionProduct(models.Model):
     def impact_endoflife(self, quantity: Decimal) -> Decimal:
         return self.endoflife_impact * quantity
 
-    def impacts(self, quantity: Decimal) -> tuple[Decimal, Decimal, Decimal]:
+    def impact_exploitation(self, quantity: Decimal, reference_period: int) -> Decimal:
+        rp = self.renewal_factor(reference_period)
+        return (
+            (rp * self.exploitation_impact)
+            + (
+                (rp - 1)
+                * (
+                    self.production_impact
+                    + self.construction_impact
+                    + self.endoflife_impact
+                )
+            )
+        ) * quantity
+
+    def renewal_factor(self, reference_period: int) -> Decimal:
+        return max(
+            Decimal("1"), Decimal(reference_period) / Decimal(self.typical_lifetime)
+        )
+
+    def impacts(
+        self, quantity: Decimal, reference_period: int
+    ) -> tuple[Decimal, Decimal, Decimal, Decimal]:
         return (
             self.impact_production(quantity),
             self.impact_construction(quantity),
             self.impact_endoflife(quantity),
+            self.impact_exploitation(quantity, reference_period),
         )
 
 
@@ -83,20 +105,26 @@ class Zone(models.Model):
 
     products = models.ManyToManyField(ConstructionProduct, through="ZoneProduct")
 
-    def impacts(self) -> tuple[Decimal, Decimal, Decimal]:
+    def impacts(self) -> tuple[Decimal, Decimal, Decimal, Decimal]:
         zone_products = ZoneProduct.objects.all().filter(zone=self)
         products_impacts = [
-            zone_product.product.impacts(zone_product.quantity)
+            zone_product.product.impacts(
+                zone_product.quantity, self.building.reference_period
+            )
             for zone_product in zone_products
         ]
-        production_impacts, construction_impacts, endoflife_impacts = list(
-            zip(*products_impacts)
-        )
+        (
+            production_impacts,
+            construction_impacts,
+            endoflife_impacts,
+            exploitation_impact,
+        ) = list(zip(*products_impacts))
 
         return (
             sum(production_impacts),
             sum(construction_impacts),
             sum(endoflife_impacts),
+            sum(exploitation_impact),
         )
 
     def __str__(self):

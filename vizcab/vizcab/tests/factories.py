@@ -18,7 +18,7 @@ class ConstructionProduct(DjangoModelFactory):
     unite = "M2"
     production_impact = 17.5
     construction_impact = 2.1
-    exploitation_impact = 0
+    exploitation_impact = 0.6
     endoflife_impact = 0.3
     typical_lifetime = 50
 
