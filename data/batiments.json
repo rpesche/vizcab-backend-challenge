@@ -1,0 +1,36 @@
+[
+    {
+        "id": 0,
+        "nom": "Résidence Les Orties",
+        "surface": null,
+        "zoneIds": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "usage": null,
+        "periodeDeReference": 50
+    },
+    {
+        "id": 1,
+        "nom": "Siège social Entreprise D",
+        "surface": null,
+        "zoneIds": [
+            4,
+            5
+        ],
+        "usage": null,
+        "periodeDeReference": 30
+    },
+    {
+        "id": 2,
+        "nom": "Centre sportif",
+        "surface": null,
+        "zoneIds": [
+            6
+        ],
+        "usage": null,
+        "periodeDeReference": 50
+    }
+]

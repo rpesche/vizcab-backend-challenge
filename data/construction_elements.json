@@ -1,0 +1,146 @@
+[
+    {
+        "id": 10632,
+        "nom": "Isolant en polyuréthane",
+        "unite": "m²",
+        "impactUnitaireRechauffementClimatique": {
+            "production": 17.5,
+            "construction": 2.1,
+            "exploitation": 0,
+            "finDeVie": 0.3
+        },
+        "dureeVieTypique": 50
+    },
+    {
+        "id": 12454,
+        "nom": "Dalle pleine en béton d'épaisseur 0.20 m",
+        "unite": "m²",
+        "impactUnitaireRechauffementClimatique": {
+            "production": 37.7,
+            "construction": 15.8,
+            "exploitation": -2,
+            "finDeVie": 0.6
+        },
+        "dureeVieTypique": 100
+    },
+    {
+        "id": 6396,
+        "nom": "Mortiers de ragréage muraux",
+        "unite": "m²",
+        "impactUnitaireRechauffementClimatique": {
+            "production": 2.5,
+            "construction": 0,
+            "exploitation": 0,
+            "finDeVie": 0.8
+        },
+        "dureeVieTypique": 30
+    },
+    {
+        "id": 13428,
+        "nom": "Plafond suspendu en plaque de plâtre",
+        "unite": "m²",
+        "impactUnitaireRechauffementClimatique": {
+            "production": 10.8,
+            "construction": 3.4,
+            "exploitation": 0,
+            "finDeVie": 0.1
+        },
+        "dureeVieTypique": 50
+    },
+    {
+        "id": 18614,
+        "nom": "Refend, Voile ou Mur intérieur en béton armé d'épaisseur 0.20 m",
+        "unite": "m²",
+        "impactUnitaireRechauffementClimatique": {
+            "production": 37.7,
+            "construction": 7.6,
+            "exploitation": -5.9,
+            "finDeVie": 1.6
+        },
+        "dureeVieTypique": 100
+    },
+    {
+        "id": 16233,
+        "nom": "Escalier droit en béton",
+        "unite": "m",
+        "impactUnitaireRechauffementClimatique": {
+            "production": 303,
+            "construction": 48.3,
+            "exploitation": -10.6,
+            "finDeVie": -6.4
+        },
+        "dureeVieTypique": 100
+    },
+    {
+        "id": 8101,
+        "nom": "Acier de ferraillage",
+        "unite": "kg",
+        "impactUnitaireRechauffementClimatique": {
+            "production": 3.1,
+            "construction": 0.4,
+            "exploitation": 0,
+            "finDeVie": 0.2
+        },
+        "dureeVieTypique": 100
+    },
+    {
+        "id": 8779,
+        "nom": "Solins et bandes de rives en aluminium",
+        "unite": "mL",
+        "impactUnitaireRechauffementClimatique": {
+            "production": 17.8,
+            "construction": 3.3,
+            "exploitation": 0,
+            "finDeVie": 0.2
+        },
+        "dureeVieTypique": 20
+    },
+    {
+        "id": 7993,
+        "nom": "Géotextile en polypropylène",
+        "unite": "m²",
+        "impactUnitaireRechauffementClimatique": {
+            "production": 1.2,
+            "construction": 0.1,
+            "exploitation": 0,
+            "finDeVie": 0.1
+        },
+        "dureeVieTypique": 50
+    },
+    {
+        "id": 9054,
+        "nom": "Ossature métallique acier",
+        "unite": "kg",
+        "impactUnitaireRechauffementClimatique": {
+            "production": 2.7,
+            "construction": 0.3,
+            "exploitation": 0,
+            "finDeVie": 0.01
+        },
+        "dureeVieTypique": 100
+    },
+    {
+        "id": 10806,
+        "nom": "Moquette touffetée",
+        "unite": "m²",
+        "impactUnitaireRechauffementClimatique": {
+            "production": 16.4,
+            "construction": 1.2,
+            "exploitation": 2.4,
+            "finDeVie": 0.3
+        },
+        "dureeVieTypique": 10
+    },
+    {
+        "id": 25781,
+        "nom": "Revêtement de sol PVC sur liège",
+        "unite": "m²",
+        "impactUnitaireRechauffementClimatique": {
+            "production": 7.8,
+            "construction": 1.2,
+            "exploitation": 3.6,
+            "finDeVie": 0.4
+        },
+        "dureeVieTypique": 25
+    }
+]

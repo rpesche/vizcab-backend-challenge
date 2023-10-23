@@ -1,0 +1,302 @@
+[
+    {
+        "id": 0,
+        "nom": "Les Orties - Escalier A",
+        "surface": 411,
+        "usage": 1,
+        "constructionElements": [
+            {
+                "id": 10632,
+                "quantite": 175.6
+            },
+            {
+                "id": 12454,
+                "quantite": 175.6
+            },
+            {
+                "id": 6396,
+                "quantite": 283.6
+            },
+            {
+                "id": 13428,
+                "quantite": 152.1
+            },
+            {
+                "id": 18614,
+                "quantite": 234.3
+            },
+            {
+                "id": 16233,
+                "quantite": 6.1
+            },
+            {
+                "id": 8101,
+                "quantite": 370
+            },
+            {
+                "id": 7993,
+                "quantite": 49.3
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "nom": "Les Orties - Escalier B",
+        "surface": 189,
+        "usage": 1,
+        "constructionElements": [
+            {
+                "id": 10632,
+                "quantite": 79.3
+            },
+            {
+                "id": 12454,
+                "quantite": 85.2
+            },
+            {
+                "id": 6396,
+                "quantite": 130.7
+            },
+            {
+                "id": 13428,
+                "quantite": 59.4
+            },
+            {
+                "id": 18614,
+                "quantite": 106.9
+            },
+            {
+                "id": 16233,
+                "quantite": 5.9
+            },
+            {
+                "id": 8101,
+                "quantite": 292.3
+            },
+            {
+                "id": 7993,
+                "quantite": 24
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "nom": "Les Orties - Crêche",
+        "surface": 170,
+        "usage": 4,
+        "constructionElements": [
+            {
+                "id": 10632,
+                "quantite": 74.8
+            },
+            {
+                "id": 12454,
+                "quantite": 83.6
+            },
+            {
+                "id": 6396,
+                "quantite": 114.6
+            },
+            {
+                "id": 13428,
+                "quantite": 52.9
+            },
+            {
+                "id": 18614,
+                "quantite": 87.8
+            },
+            {
+                "id": 16233,
+                "quantite": 1
+            },
+            {
+                "id": 10806,
+                "quantite": 113.1
+            },
+            {
+                "id": 25781,
+                "quantite": 45.1
+            },
+            {
+                "id": 8101,
+                "quantite": 206.3
+            },
+            {
+                "id": 7993,
+                "quantite": 14.7
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "nom": "Restaurant Du Pain Aux Orties",
+        "surface": 215,
+        "usage": 5,
+        "constructionElements": [
+            {
+                "id": 10632,
+                "quantite": 67.8
+            },
+            {
+                "id": 12454,
+                "quantite": 103.4
+            },
+            {
+                "id": 6396,
+                "quantite": 113.2
+            },
+            {
+                "id": 13428,
+                "quantite": 78
+            },
+            {
+                "id": 18614,
+                "quantite": 70.9
+            },
+            {
+                "id": 16233,
+                "quantite": 1.5
+            },
+            {
+                "id": 8779,
+                "quantite": 23.7
+            },
+            {
+                "id": 10806,
+                "quantite": 115.5
+            },
+            {
+                "id": 25781,
+                "quantite": 79.4
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "nom": "Entreprise D",
+        "surface": 1243,
+        "usage": 2,
+        "constructionElements": [
+            {
+                "id": 10632,
+                "quantite": 474.6
+            },
+            {
+                "id": 12454,
+                "quantite": 599.7
+            },
+            {
+                "id": 6396,
+                "quantite": 566
+            },
+            {
+                "id": 13428,
+                "quantite": 468.1
+            },
+            {
+                "id": 18614,
+                "quantite": 480.9
+            },
+            {
+                "id": 16233,
+                "quantite": 15.2
+            },
+            {
+                "id": 8779,
+                "quantite": 137.1
+            },
+            {
+                "id": 10806,
+                "quantite": 942.6
+            },
+            {
+                "id": 25781,
+                "quantite": 368.4
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "nom": "Espace de coworking - DLab",
+        "surface": 812,
+        "usage": 2,
+        "constructionElements": [
+            {
+                "id": 10632,
+                "quantite": 304.1
+            },
+            {
+                "id": 12454,
+                "quantite": 325.2
+            },
+            {
+                "id": 6396,
+                "quantite": 199.6
+            },
+            {
+                "id": 13428,
+                "quantite": 324.3
+            },
+            {
+                "id": 18614,
+                "quantite": 280.7
+            },
+            {
+                "id": 16233,
+                "quantite": 5.1
+            },
+            {
+                "id": 10806,
+                "quantite": 760.4
+            },
+            {
+                "id": 25781,
+                "quantite": 181
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "nom": "Sport & Co",
+        "surface": 620,
+        "usage": 3,
+        "constructionElements": [
+            {
+                "id": 10632,
+                "quantite": 272.2
+            },
+            {
+                "id": 12454,
+                "quantite": 301.5
+            },
+            {
+                "id": 6396,
+                "quantite": 219.4
+            },
+            {
+                "id": 13428,
+                "quantite": 668.1
+            },
+            {
+                "id": 18614,
+                "quantite": 230.9
+            },
+            {
+                "id": 16233,
+                "quantite": 23.4
+            },
+            {
+                "id": 8779,
+                "quantite": 92.4
+            },
+            {
+                "id": 10806,
+                "quantite": 62
+            },
+            {
+                "id": 25781,
+                "quantite": 608.3
+            }
+        ]
+    }
+]
