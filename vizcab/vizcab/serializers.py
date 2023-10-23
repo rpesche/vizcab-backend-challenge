@@ -1,4 +1,9 @@
-from rest_framework.serializers import ModelSerializer, DecimalField, CharField
+from rest_framework.serializers import (
+    ModelSerializer,
+    DecimalField,
+    CharField,
+    Serializer,
+)
 
 from . import models
 
@@ -13,3 +18,10 @@ class Building(ModelSerializer):
         deep = 1
         model = models.Building
         fields = ["id", "name", "usage", "reference_period", "surface", "most_usage"]
+
+
+class Impacts(Serializer):
+    production_impacts = DecimalField(max_digits=9, decimal_places=2)
+    construction_impacts = DecimalField(max_digits=9, decimal_places=2)
+    endoflife_impacts = DecimalField(max_digits=9, decimal_places=2)
+    exploitation_impact = DecimalField(max_digits=9, decimal_places=2)

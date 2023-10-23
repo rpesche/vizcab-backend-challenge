@@ -36,6 +36,22 @@ class Building(models.Model):
 
         return total_impact
 
+    def impacts(self) -> tuple[Decimal, Decimal, Decimal, Decimal]:
+        zones_impacts = [zone.impacts() for zone in self.zones.all()]
+        (
+            production_impacts,
+            construction_impacts,
+            endoflife_impacts,
+            exploitation_impact,
+        ) = list(zip(*zones_impacts))
+
+        return (
+            sum(production_impacts),
+            sum(construction_impacts),
+            sum(endoflife_impacts),
+            sum(exploitation_impact),
+        )
+
     def __str__(self):
         return self.name
 
