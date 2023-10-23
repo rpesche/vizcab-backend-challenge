@@ -21,9 +21,6 @@ class Usage(models.IntegerChoices):
 
 class Building(models.Model):
     name = models.CharField(max_length=100, help_text="The name of this building")
-    usage = models.IntegerField(
-        choices=Usage.choices, help_text="The usage of this building"
-    )
     reference_period = models.PositiveIntegerField(
         help_text="The period in years of the lifecycle analysis"
     )

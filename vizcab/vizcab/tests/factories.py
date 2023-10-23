@@ -40,7 +40,6 @@ class Building(DjangoModelFactory):
         model = models.Building
 
     name = factory.Sequence(lambda n: f"building {n}")
-    usage = models.Usage.HOUSING
     reference_period = 4
 
 

@@ -17,7 +17,7 @@ class Building(ModelSerializer):
     class Meta:
         deep = 1
         model = models.Building
-        fields = ["id", "name", "usage", "reference_period", "surface", "most_usage"]
+        fields = ["id", "name", "reference_period", "surface", "most_usage"]
 
 
 class Impacts(Serializer):
