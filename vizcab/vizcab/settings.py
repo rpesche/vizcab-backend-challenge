@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "rest_framework",
     # local applications
     "vizcab",
+    "django_extensions",
 ]
 
 MIDDLEWARE = [
